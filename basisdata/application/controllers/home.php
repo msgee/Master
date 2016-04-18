@@ -28,7 +28,7 @@ class Home extends CI_Controller {
 	public function add(){
 		$codename=$_POST['codename'];
 		
-		if ((is_numeric($codename)) && (strlen($codename) == 6)) 
+		if ((is_string($codename)) && (strlen($codename) == 6)) 
 		{				
 			//potong angka server
 			$angkaserver = substr($codename,0,1);
@@ -167,7 +167,7 @@ class Home extends CI_Controller {
 	public function up(){
 		$codename=$_POST['codename'];
 		
-		if ((is_numeric($codename)) && (strlen($codename) == 6)) 
+		if ((is_string($codename)) && (strlen($codename) == 6)) 
 		{				
 			//potong angka server
 			$angkaserver = substr($codename,0,1);
@@ -305,7 +305,7 @@ class Home extends CI_Controller {
 	public function valid_server(){
 		$codename=$_POST['codename'];
 		
-		if ((is_numeric($codename)) && (strlen($codename) == 6)) 
+		if ((is_string($codename)) && (strlen($codename) == 6)) 
 		{				
 			//potong angka server
 			$angkaserver = substr($codename,0,1);
